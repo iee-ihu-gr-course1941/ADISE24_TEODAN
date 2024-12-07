@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αρχικοποίηση Σύνδεσης - Ataxx Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container" id="auth-container">
+        <h2>Ataxx Game</h2>
+       
+        <form id="authForm">
+            <label for="playerName">Όνομα:</label>
+            <input type="text" id="playerName" name="playerName" placeholder="Εισάγετε το όνομά σας" required>
+            <br>
+            <button type="submit">Έναρξη</button>
+        </form>
+        <div id="message" class="hidden">
+            <p>Καλώς ήρθατε, <span id="playerDisplayName"></span>!</p>
+        </div>
+    </div>
+    <div class="background" id="background" style="display:none;">
+        <img src="picc.png" alt="Background Image" class="background-img" />
+    </div>
+    <div class="menu" id="menu" style="display:none;">
+        <h1>Ataxx Game</h1>
+        <ul>
+            <li><button id="startBtn">Start Game</button></li>
+            <li><button id="instructionsBtn">ΟΔΗΓΕΙΕΣ</button></li>
+            <li><button id="exitBtn">Exit</button></li>
+        </ul>
+    </div>
+    <div id="instructionsModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Πως να Παίξετε το Ataxx</h2>
+            <p>Το Ataxx είναι ένα στρατηγικό παιχνίδι που παίζεται σε ένα πίνακα 7x7, όπου δύο παίκτες ανταγωνίζονται για να ελέγξουν τον πίνακα.</p>
+            <h3>Στόχος:</h3>
+            <p>Ο στόχος του παιχνιδιού είναι να καταλάβετε περισσότερα τετράγωνα από τον αντίπαλο, μετακινώντας και επεκτείνοντας τα πιόνια σας στον πίνακα.</p>
+            <h3>Παιχνίδι:</h3>
+            <ul>
+                <li>Οι παίκτες κάνουν εναλλασσόμενους γύρους για να μετακινήσουν τα πιόνια τους στον πίνακα.</li>
+                <li>Κάθε παίκτης μπορεί να μετακινήσει ένα από τα πιόνια του σε ένα διπλανό κενό τετράγωνο ή να κάνει άλμα πάνω από το πιόνι του αντιπάλου.</li>
+                <li>Όταν κάνει άλμα πάνω από το πιόνι του αντιπάλου, το πιόνι του αντιπάλου μετατρέπεται στο χρώμα του παίκτη.</li>
+                <li>Το παιχνίδι τελειώνει όταν δεν είναι δυνατή καμία άλλη κίνηση.</li>
+            </ul>
+            <button id="closeInstructionsBtn">Κλείσιμο</button>
+        </div>
+    </div>
+    <div class="status" id="status">Loading game...</div>
+    <div class="board" id="board"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="game.js"></script>
+    <script>
+        document.getElementById('authForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const playerName = document.getElementById('playerName').value;
+            document.getElementById('playerDisplayName').textContent = playerName;
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('auth-container').style.display = 'none';
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('background').style.display = 'block';
+        });
+        document.getElementById('startBtn').addEventListener('click', function () {
+            const background = document.querySelector('.background');
+            background.style.display = 'none';
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('status').innerHTML = "Game Started";
+        });
+        document.getElementById('instructionsBtn').addEventListener('click', function () {
+            const modal = document.getElementById('instructionsModal');
+            modal.style.display = 'block';
+        });
+        document.getElementById('closeInstructionsBtn').addEventListener('click', function () {
+            const modal = document.getElementById('instructionsModal');
+            modal.style.display = 'none';
+        });
+        document.getElementById('exitBtn').addEventListener('click', function () {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>
