@@ -177,6 +177,8 @@ function getValidMovesForPiece($board, $row, $col) {
     return $validMoves;
 }
 
+
+
 function determineWinner($board) {
     $counts = [0, 0, 0];
 

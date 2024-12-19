@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="auth-container" id="auth-container">
-        <h2>Ataxx Game</h2>
+        <h2>    </h2>
        
         <form id="authForm">
             <label for="playerName">Όνομα:</label>
-            <input type="text" id="playerName" name="playerName" placeholder="Εισάγετε το όνομά σας" required>
+            <input type="text" id="playerName" name="playerName" placeholder="Εισάγετε το όνομά παιχνιδιού" required>
             <br>
             <button type="submit">Έναρξη</button>
         </form>
@@ -45,6 +45,7 @@
                 <li>Το παιχνίδι τελειώνει όταν δεν είναι δυνατή καμία άλλη κίνηση.</li>
             </ul>
             <button id="closeInstructionsBtn">Κλείσιμο</button>
+            
         </div>
     </div>
     <div class="status" id="status">Loading game...</div>
@@ -60,12 +61,18 @@
             document.getElementById('auth-container').style.display = 'none';
             document.getElementById('menu').style.display = 'block';
             document.getElementById('background').style.display = 'block';
-        });
+
+            // Remove the background image when the game starts
+            document.body.classList.add('game-active');
+            document.getElementById('status').style.display = 'block';
+        });     
         document.getElementById('startBtn').addEventListener('click', function () {
             const background = document.querySelector('.background');
             background.style.display = 'none';
             document.getElementById('menu').style.display = 'none';
+            document.getElementById('status').style.display = 'block'; 
             document.getElementById('status').innerHTML = "Game Started";
+            
         });
         document.getElementById('instructionsBtn').addEventListener('click', function () {
             const modal = document.getElementById('instructionsModal');
@@ -78,6 +85,7 @@
         document.getElementById('exitBtn').addEventListener('click', function () {
             window.location.reload();
         });
+        
     </script>
 </body>
 </html>

@@ -22,6 +22,33 @@ $(document).ready(function () {
         window.close();
     });
 
+    $('#game-controls').show();
+
+    $('#resetBtn').click(function () {
+        resetGame();
+    });
+
+    $('#exitBtn').click(function () {
+        window.location.reload();
+    });
+
+    function resetGame() {
+        $.ajax({
+            url: 'game.php',
+            method: 'POST',
+            data: { action: 'new_game' },
+            success: function (response) {
+                const data = JSON.parse(response);
+                if (data.error) {
+                    alert('Error resetting the game: ' + data.error);
+                    return;
+                }
+                updateBoard(data.board_state, data.current_player);
+                $('#status').text(`Player ${data.current_player}'s turn`);
+            }
+        });
+    }
+
     function initializeGame() {
         $.ajax({
             url: 'game.php',
