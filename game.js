@@ -9,7 +9,10 @@ $(document).ready(function () {
         $('body').addClass('game-active');
         startGame();
     });
-
+    function startGame() {
+        console.log("Thelw pagwto");
+        
+    }
     $('#instructionsBtn').click(function() {
         $('#instructionsModal').fadeIn(500);
     });
