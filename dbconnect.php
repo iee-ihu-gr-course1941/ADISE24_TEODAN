@@ -1,7 +1,7 @@
 <?php
-$username='iee2021233';
-$password='mpla123';
-$host='users.iee.ihu.gr';
+$username='root';
+$password='';
+$host='localhost';
 $dbname = 'ataxx_game';
 
 

@@ -1,6 +1,6 @@
 <?php
-$host='localhost';
-$dbname = 'THE_DB';
+$host='users.iee.ihu.gr';
+$dbname = 'ataxx_game';
 require_once "db_upass.php";
 
 $user=$DB_USER;
