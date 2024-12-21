@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 $host = 'localhost';
 $dbname = 'ataxx_game';
 $username = 'root';
-$password = '';
+$password = '00000';
 
 
 $mysqli = new mysqli($host, $username, $password, $dbname,null,'/home/student/iee/2021/iee2021233/mysql/run/mysql.sock');
