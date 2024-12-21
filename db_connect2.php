@@ -1,6 +1,6 @@
 <?php
 $host='localhost';
-$db = 'THE_DB';
+$dbname = 'THE_DB';
 require_once "db_upass.php";
 
 $user=$DB_USER;
