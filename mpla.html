@@ -10,7 +10,7 @@
     <div class="auth-container" id="auth-container">
         <h2>    </h2>
        
-        <form id="authForm">
+        <form id="authForm" action="save_player.php" method="POST">
             <label for="playerName">Όνομα:</label>
             <input type="text" id="playerName" name="playerName" placeholder="Εισάγετε το όνομά παιχνιδιού" required>
             <br>
@@ -62,7 +62,7 @@
             document.getElementById('menu').style.display = 'block';
             document.getElementById('background').style.display = 'block';
 
-            // Remove the background image when the game starts
+            
             document.body.classList.add('game-active');
             document.getElementById('status').style.display = 'block';
         });     
