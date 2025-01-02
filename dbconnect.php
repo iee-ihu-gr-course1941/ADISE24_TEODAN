@@ -2,7 +2,7 @@
 $username='root';
 $password='';
 $host='localhost';
-$dbname = 'ataxx_game';
+$dbname = 'test_project_db';
 
 
 $mysqli = new mysqli($host, $username, $password, $dbname,null,'/home/student/iee/2021/iee2021233/mysql/run/mysql.sock');
