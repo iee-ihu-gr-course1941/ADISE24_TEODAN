@@ -1,6 +1,6 @@
 <?php
 $username='root';
-$password='0000000';
+$password='';
 $host='localhost';
 $dbname = 'ataxx_game';
 
