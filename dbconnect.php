@@ -1,5 +1,5 @@
 <?php
-$username='iee2021233';
+$username='root';
 $password='';
 $host='users.iee.ihu.gr';
 $dbname = 'test_project_db';
