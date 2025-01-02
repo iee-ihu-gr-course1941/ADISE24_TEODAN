@@ -1,13 +1,14 @@
 <?php
+
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$host = 'localhost';
-$dbname = 'ataxx_game';
-$username = 'root';
-$password = '';
 
 
+require_once "dbconnect.php";
+
+$method = $_SERVER['REQUEST_METHOD'];
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -17,11 +18,7 @@ try {
     exit;
 }
 
-$mysqli = new mysqli($host, $username, $password, $dbname,null,'/home/student/iee/2021/iee2021233/mysql/run/mysql.sock');
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . 
-    $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
+
 
 
 $action = $_POST['action'] ?? '';
