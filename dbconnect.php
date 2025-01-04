@@ -1,6 +1,6 @@
 <?php
 $username='iee2021233';
-$password='000000';
+$password='';
 $host='localhost';
 $dbname = 'test_project_db';
 
