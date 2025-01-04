@@ -10,14 +10,6 @@ require_once "dbconnect.php";
 
 
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    
-} catch (PDOException $e) {
-    echo json_encode(['error' => 'Database connection failed: ' . $e->getMessage()]);
-    exit;
-}
-
 
 
 
