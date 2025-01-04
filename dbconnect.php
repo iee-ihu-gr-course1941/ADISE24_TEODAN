@@ -2,8 +2,10 @@
 $username='root';
 $password='';
 $host='localhost';
-$dbname = 'ataxx_game';
-$socket = '/home/staff/asidirop/mysql/run/mysql.sock';
+$dbname = 'test';
+
+
+$socket = '/home/student/iee/2021/iee2021233/mysql/run/mysql.sock';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;socket=$socket", $username, $password);

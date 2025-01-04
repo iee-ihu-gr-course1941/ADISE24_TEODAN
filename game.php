@@ -13,7 +13,6 @@ require_once "dbconnect.php";
 
 
 
-
 $action = $_POST['action'] ?? '';
 
 switch ($action) {
