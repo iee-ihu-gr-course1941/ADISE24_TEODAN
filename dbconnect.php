@@ -1,8 +1,8 @@
 <?php
 $username='root';
-$password='000000';
-$host='users.iee.ihu.gr';
-$dbname = 'test_project_db';
+$password='';
+$host='localhost';
+$dbname = 'ataxx_game';
 
 
 $mysqli = new mysqli($host, $username, $password, $dbname,null,'/home/student/iee/2021/iee2021233/mysql/run/mysql.sock');
