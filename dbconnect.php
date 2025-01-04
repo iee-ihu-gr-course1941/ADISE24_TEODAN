@@ -1,7 +1,7 @@
 <?php
 $username='root';
 $password='000000';
-$host='localhost';
+$host='127.0.0.1';
 $dbname = 'test_project_db';
 
 
