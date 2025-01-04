@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 
 
 
-$method = $_SERVER['REQUEST_METHOD'];
+
 require_once "dbconnect.php";
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
