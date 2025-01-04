@@ -1,7 +1,7 @@
 <?php
 $username='iee2021233';
-$password='';
-$host='localhost';
+$password='000000';
+$host='users.iee.ihu.gr';
 $dbname = 'test_project_db';
 
 
