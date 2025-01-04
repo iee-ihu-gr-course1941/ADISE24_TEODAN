@@ -1,5 +1,5 @@
 <?php
-$username='iee2021233';
+$username='root';
 $password='000000';
 $host='localhost';
 $dbname = 'ataxx_game';
