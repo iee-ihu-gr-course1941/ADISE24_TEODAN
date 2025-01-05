@@ -2,7 +2,7 @@
 $username='root';
 $password='';
 $host='localhost';
-$dbname = 'test';
+$dbname = 'ataxx_game';
 
 
 $socket = '/home/student/iee/2021/iee2021233/mysql/run/mysql.sock';
