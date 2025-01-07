@@ -1,4 +1,4 @@
-/* General Styles for Body */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Background and Layout Settings */
+
 body {
     display: flex;
     flex-direction: column;
@@ -155,17 +155,17 @@ body {
     background-color: rgba(255, 255, 0, 0.3) !important;
 }
 
-/* Auth Container Styles */
+
 #auth-container {
-    background-image: url('picc.png'); /* Replace with your image */
-    background-size: 60%; /* Adjust the size of the background image to 60% */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
-    padding: 20px; /* Add padding around the content */
+    background-image: url('picc.png'); 
+    background-size: 60%;
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    padding: 20px; 
     border-radius: 10px;
-    width: 80%; /* Set width to 80% of the parent container */
-    height: 400px; /* Set a fixed height for the container */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 80%; 
+    height: 400px; 
+    margin: 0 auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,19 +212,19 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Status Styles */
+
 .status {
     margin: 20px;
     font-size: 18px;
-    display: none; /* Initially hide the status */
+    display: none; 
 }
 
-/* Hidden Class */
+
 .hidden {
     display: none;
 }
 
-/* Board visibility */
+
 #board {
     display: none;
 }
